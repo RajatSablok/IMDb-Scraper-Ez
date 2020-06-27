@@ -3,10 +3,12 @@ var cors = require("cors");
 
 const app = express();
 
-const chartRoutes = require("./api/routes/charts");
+const moiveChartRoutes = require("./api/routes/movies/charts");
+const tvChartRoutes = require("./api/routes/tv series/charts");
 
 app.use(cors());
-app.use("/chart", chartRoutes);
+app.use("/movies", moiveChartRoutes);
+app.use("/tv", tvChartRoutes);
 
 app.use((req, res, next) => {
   const error = new Error("Page not found");

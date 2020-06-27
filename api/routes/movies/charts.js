@@ -14,7 +14,7 @@ var resultObj = [];
 var popularMoviesObj = [];
 
 //Get a list of top rated movies
-router.get("/topMovies", async (req, res, next) => {
+router.get("/top", async (req, res, next) => {
   var options = {
     uri: "https://www.imdb.com/chart/top/?ref_=nv_mv_250",
     transform: function (html) {
@@ -78,7 +78,7 @@ router.get("/topMovies", async (req, res, next) => {
 });
 
 //Get a list of most popular movies
-router.get("/popularMovies", async (req, res, next) => {
+router.get("/popular", async (req, res, next) => {
   var options = {
     uri: "https://www.imdb.com/chart/moviemeter/?ref_=nv_mv_mpm",
     transform: function (html) {
@@ -122,8 +122,7 @@ router.get("/popularMovies", async (req, res, next) => {
         var rating = $(el).text().trim();
         ratingArr[i] = rating;
       });
-      // var YOR = JSON.parse(yearArr);
-      // console.log(YOR);
+
       for (var i = 0; i < titleArr.length; i++) {
         popularMoviesObj.push({
           rank: i + 1,
