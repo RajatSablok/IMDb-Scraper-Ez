@@ -1,0 +1,35 @@
+{
+  "name": "imdb-scraper-ez",
+  "version": "1.0.0",
+  "description": "A web crawler built specifically to scrape data off of IMDb",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RajatSablok/IMDb-Scraper-Ez.git"
+  },
+  "keywords": [
+    "scraper",
+    "nodejs",
+    "imdb"
+  ],
+  "author": "Rajat Sablok",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RajatSablok/IMDb-Scraper-Ez/issues"
+  },
+  "homepage": "https://github.com/RajatSablok/IMDb-Scraper-Ez#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
